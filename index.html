@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="StarX.LOGOTIPO.png" box-sizing="border-box"  >
+<title>Star X Dance Group</title>
+
+<style>
+/* ===========================
+   ESTILOS GERAIS
+=========================== */
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding-top: 110px;
+}
+
+h2 {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+section {
+    padding: 20px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Wrapper */
+.wrapper {
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* ===========================
+   HEADER FIXO
+=========================== */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    padding: 20px 0;
+    z-index: 999;
+}
+
+header h1 {
+    text-align: center;
+    margin: 0;
+}
+
+nav ul {
+    text-align: center;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* ===========================
+   QUEM SOMOS – float layout
+=========================== */
+.quem-img {
+    float: right;
+    width: 45%;
+    margin-left: 20px;
+}
+
+.quem-texto {
+    width: 50%;
+    float: left;
+}
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* ===========================
+   SERVIÇOS – centralização
+=========================== */
+#servicos .wrapper {
+    text-align: center;
+}
+
+.servico-card {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: left; 
+}
+
+.servico-card img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.servico-card button {
+    display: block;
+    margin-top: 10px;
+    padding: 8px;
+    width: 100%;
+    border: none;
+    background: black;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ===========================
+   AVALIAÇÕES
+=========================== */
+#avaliacoes .wrapper {
+    text-align: center;
+}
+
+.avaliacao {
+    width: 30%;
+    display: inline-block;
+    vertical-align: top;
+    margin: 1%;
+    padding: 15px;
+    background: #f5f5f5;
+    border-radius: 10px;
+}
+
+.avaliacao img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    margin: auto;
+}
+
+.avaliacao h4 {
+    text-align: center;
+}
+
+.avaliacao p {
+    font-style: italic;
+}
+
+/* ===========================
+   CONTATO – floats
+=========================== */
+.contato-form {
+    width: 48%;
+    float: left;
+    margin-right: 2%;
+}
+
+.contato-map {
+    width: 48%;
+    float: left;
+}
+
+.contato-form input,
+.contato-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 12px;
+}
+
+.contato-form button {
+    background: black;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
+}
+
+/* ===========================
+   WHATSAPP FIXO
+=========================== */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25d366;
+    color: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 60px;
+    font-size: 30px;
+}
+
+/* ===========================
+   RESPONSIVIDADE
+=========================== */
+@media (max-width: 576px) {
+
+    nav li {
+        display: block;
+        margin: 5px;
+    }
+
+    /* Quem Somos */
+    .quem-img,
+    .quem-texto {
+        float: none;
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Serviços */
+    .servico-card {
+        width: 100%;
+    }
+
+    /* Avaliações */
+    .avaliacao {
+        width: 100%;
+    }
+
+    /* Contato */
+    .contato-form,
+    .contato-map {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px 0;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>Star X Dance Group</h1>
+    <nav>
+        <ul>
+            <li><a href="#quem">Quem Somos</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+</header>
+
+<section id="quem">
+<div class="wrapper">
+
+    <h2>Quem Somos</h2>
+
+    <div class="clearfix">
+        <div class="quem-texto">
+            <p>Seja bem-vindo(a) ao Star X! Um grupo de dança apaixonado por performance, energia e movimento.</p>
+            <p>Com diferentes estilos e muita dedicação, buscamos levar alegria e emoção ao nosso público.</p>
+            <p>Esperamos te ver em algum evento e brilhar juntinho com a gente!</p>
+        </div>
+
+        <img src="StarX.Foto.png" alt="Star X" class="quem-img">
+    </div>
+
+</div>
+</section>
+
+<section id="servicos">
+<div class="wrapper">
+
+    <h2>Nossos Serviços</h2>
+
+    <div class="servico-card">
+        <img src="StarX.4walls.png">
+        <h3>Show em Eventos</h3>
+        <p>Apresentações incríveis com coreografias dinâmicas.</p>
+        <button>Contratar</button>
+    </div>
+
+    <div class="servico-card">
+        <img src="StarX.Shhh.png">
+        <h3>Animação de Festas</h3>
+        <p>Entretenimento com energia e interação com o público.</p>
+        <button>Contratar</button>
+    </div>
+
+    <div class="servico-card">
+        <img src="StarX.Uniforme.png">
+        <h3>Parcerias</h3>
+        <p>Projetos colaborativos com marcas e eventos.</p>
+        <button>Contratar</button>
+    </div>
+
+</div>
+</section>
+
+<section id="avaliacoes">
+<div class="wrapper">
+
+    <h2>Avaliações</h2>
+
+    <div class="avaliacao">
+        <img src="FestivalGeek.jpeg">
+        <h4>Santos Festival Geek</h4>
+        <p>"A energia das meninas encantou o público! Queremos novamente!"</p>
+    </div>
+
+    <div class="avaliacao">
+        <img src="AnimeSantos.webp">
+        <h4>Anime Santos</h4>
+        <p>"Performance impecável e muito carisma. Show incrível!"</p>
+    </div>
+
+    <div class="avaliacao">
+        <img src="TribunaKids.jfif">
+        <h4>Tribuna Kids</h4>
+        <p>"Encantaram as crianças com muita alegria e movimento."</p>
+    </div>
+
+</div>
+</section>
+
+<section id="contato">
+<div class="wrapper">
+
+    <h2>Contato</h2>
+
+    <div class="clearfix">
+
+        <div class="contato-form">
+            <form>
+                <input type="text" placeholder="Seu nome" required>
+                <input type="email" placeholder="Seu e-mail" required>
+                <textarea rows="5" placeholder="Sua mensagem" required></textarea>
+                <button>Enviar</button>
+            </form>
+        </div>
+
+        <div class="contato-map">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116602.80559578209!2d-46.5025957!3d-24.0367887!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce1f9dd9bf50e5%3A0x83b44c5ff623bb51!2sPraia%20Grande%2C%20SP!5e0!3m2!1spt-BR!2sbr!4v1764468316001!5m2!1spt-BR!2sbr"
+                width="100%" height="300" style="border:0;" allowfullscreen="">
+            </iframe>
+        </div>
+
+    </div>
+
+</div>
+</section>
+
+<footer>
+    © 2025 Star X - Todos os direitos reservados.
+</footer>
+
+<div class="whatsapp">✆</div>
+
+</body>
+</html>
